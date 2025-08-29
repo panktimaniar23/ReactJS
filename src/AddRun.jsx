@@ -1,16 +1,8 @@
 import { useEffect, useState } from "react";
-const button = ({...RunNumber}) => {
+const button = ({RunNumber}) => {
     const Run_Number = [...RunNumber];
   return (
-  <>
-  {RunNumber.map((run,I) =>(
-    <li key={I}>{run}</li>
-  ))}
-
-  {Run_Number.map((run,I) =>(
-    <li key={I} >{run}</li>
-  ))}
-    
+  <>   
         <div 
               style={{
                 backgroundColor: "#43688f",
