@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
-function button  () {
-    const RunNumber = ['0','1','2','3','4','6'];
+const button = ({...RunNumber}) => {
+    const Run_Number = [...RunNumber];
   return (
   <>
+  {RunNumber.map((run,I) =>(
+    <li key={I}>{run}</li>
+  ))}
+
+  {Run_Number.map((run,I) =>(
+    <li key={I} >{run}</li>
+  ))}
     
         <div 
               style={{
@@ -19,9 +26,9 @@ function button  () {
                     fontWeight:"normal",
                     color:"rgba(255, 255, 255, 0.87)",
                 }}>
-                    Add Runs
+                    Add Runs, hello
                     </p>
-              {RunNumber.map((run, runNumberIndex) =>(
+              {Run_Number.map((run, runNumberIndex) =>(
               <button key={runNumberIndex}
                 style={{
                   backgroundColor: "gray",

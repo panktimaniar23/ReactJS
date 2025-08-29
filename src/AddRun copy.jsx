@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-function button  () {
-    const RunNumber = ['0','1','2','3','4','6'];
+function button  (...run) {
+    //const RunNumber = ['0','1','2','3','4','6'];
   return (
   <>
           <div 
@@ -18,9 +18,9 @@ function button  () {
                     fontWeight:"normal",
                     color:"rgba(255, 255, 255, 0.87)",
                 }}>
-                    Add Runs
+                    Add Runs, Hello
                     </p>
-              {RunNumber.map((run, runNumberIndex) =>(
+              {run.map((run, runNumberIndex) =>(
               <button key={runNumberIndex}
                 style={{
                   backgroundColor: "gray",
